@@ -25,7 +25,6 @@
         android:layout_marginTop="40dp"
         android:layout_marginBottom="64dp"
         android:text="Empty"
-        app:layout_constraintBottom_toTopOf="@+id/carid_edit"
         app:layout_constraintEnd_toStartOf="@+id/btn3_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn1_button"

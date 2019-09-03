@@ -3,10 +3,10 @@ package buu.informatics.s59160625.parking2
 
 import android.graphics.Color
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import kotlinx.android.synthetic.main.fragment_parking.*
 
 /**
@@ -51,6 +51,7 @@ class Parking : Fragment() {
         delete_button.setOnClickListener {
             delete()
         }
+        setHasOptionsMenu(true)
     }
 
     private fun showValue(){
@@ -141,5 +142,16 @@ class Parking : Fragment() {
         carid_edit.setText("")
         brand_edit.setText("")
         fullname_edit.setText("")
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater?.inflate(R.menu.option_info, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        return NavigationUI.onNavDestinationSelected(item!!,
+            view!!.findNavController())
+                || super.onOptionsItemSelected(item)
     }
 }

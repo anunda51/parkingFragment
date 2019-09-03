@@ -19,4 +19,9 @@
         android:name="buu.informatics.s59160625.parking2.Parking"
         android:label="fragment_parking"
         tools:layout="@layout/fragment_parking" />
+    <fragment
+        android:id="@+id/info_page"
+        android:name="buu.informatics.s59160625.parking2.info_page"
+        android:label="fragment_info_page"
+        tools:layout="@layout/fragment_info_page" />
 </navigation>
