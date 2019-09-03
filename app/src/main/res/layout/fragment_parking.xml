@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Parking">
+
+    <Button
+        android:id="@+id/btn1_button"
+        android:layout_width="111dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="40dp"
+        android:text="Empty"
+        app:layout_constraintEnd_toStartOf="@+id/btn2_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn2_button"
+        android:layout_width="111dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="64dp"
+        android:text="Empty"
+        app:layout_constraintBottom_toTopOf="@+id/carid_edit"
+        app:layout_constraintEnd_toStartOf="@+id/btn3_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn1_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn3_button"
+        android:layout_width="111dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="40dp"
+        android:text="Empty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn2_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/value"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/carid_edit"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="186dp"
+            android:layout_marginEnd="30dp"
+            android:ems="10"
+            android:hint="CarID"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/fullname_edit"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="30dp"
+            android:ems="10"
+            android:hint="Fullname"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brand_edit" />
+
+        <EditText
+            android:id="@+id/brand_edit"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="49dp"
+            android:ems="10"
+            android:hint="Brand"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/fullname_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/carid_edit" />
+
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="153dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="48dp"
+            android:background="@color/colorPrimary"
+            android:text="Update"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fullname_edit" />
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="153dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="35dp"
+            android:background="@color/colorAccent"
+            android:text="Delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toEndOf="@+id/update_button"
+            app:layout_constraintTop_toBottomOf="@+id/fullname_edit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
